@@ -10,5 +10,8 @@ Helping Seth and Tom to create a election-audit result analysis to find the winn
 
 ## Election - Audit Summary
 This script can be adjusted to incorporate any election results with any number of counties and candidates. As long as the format of csv remains the same, with the same delimiter, the script can import any other data set and output the winning candidates and states. If there are changes to the format, we can adjust the columns read by the csv that is assigned to the specific variables to adapt the script to other files.<br />
-For example, the number in the brackets can be changed to the corresponding column index depending on the location of the corresponding information in the file.<br />
+For example, the number in the brackets can be changed to the corresponding column index depending on the location of the corresponding information in the file. For example is the original data has the name of the candidate names in the fourth column in the csv, the code can be adjusted to candidate_name = row [3]. <br />
 <img width="403" alt="Screen Shot 2022-03-13 at 7 38 01 PM" src="https://user-images.githubusercontent.com/98621924/158095475-2c93de34-601c-4ceb-b952-ea09a054086e.png"> <br />
+The seciton with the largest county turnout can also be easily changed to different conditions to fit the analysis demand, such as least voter turnout rate. <br />
+<img width="683" alt="Screen Shot 2022-03-13 at 7 41 27 PM" src="https://user-images.githubusercontent.com/98621924/158095720-57f57616-7350-4800-a636-fbe277f26c0d.png"><br />
+To chaneg to least voter turnout rate, the code needs to change the original winning_county_count to the first value rather than set as 0, and change the conditional to compare all county_vote_count with the number and assign the value if less than the exisiting number to find out the county with the least amount of votes.<br />
